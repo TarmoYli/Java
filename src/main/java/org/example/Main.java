@@ -1,10 +1,7 @@
 package org.example;
 
 import java.util.Arrays;
-import java.util.Locale;
-
 import static java.lang.Math.sqrt;
-import static java.lang.Math.toIntExact;
 
 public class Main {
     public static void main(String[] args) {
