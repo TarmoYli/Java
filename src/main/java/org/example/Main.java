@@ -1,6 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+
+import static java.lang.Math.round;
 import static java.lang.Math.sqrt;
 
 public class Main {
@@ -11,7 +14,7 @@ public class Main {
         System.out.println(t1(x, y));
 
 // T2.
-        t2(5);
+        t2(7);
 
 // T3.
         System.out.println(Geometria.circle(3.5));
@@ -36,7 +39,13 @@ public class Main {
 
 // T7.
     System.out.println(t7(10));
+
+// T8.
+    System.out.println(t8(10));
+
     }
+
+
 
 
     static double t1(int[] x, int[] y) {
@@ -77,7 +86,7 @@ public class Main {
 
             }
         }
-        return null;    // lonkalta tämmönen tänne jos loopit kusahtaa.
+        return null;    // lonkalta tämmönen tänne jos joku kusahtaa.
     }
 
     static int[] t5(int[] x) {
@@ -127,5 +136,24 @@ public class Main {
             b=c;
         }
         return b;
+    }
+    static ArrayList<Integer> t8(int full){
+
+        int half = Math.round((float)full/2);
+        ArrayList<Integer> forRet = new ArrayList<>();
+
+        for (int i = half; i < full; i++) {
+            int root = (int)Math.round(sqrt(i));
+            int start = 2;
+            while(start < root){
+                if(i == 2) {
+                    forRet.add(i);
+                }
+
+
+                start++;
+            }
+        }
+        return forRet;
     }
 }
