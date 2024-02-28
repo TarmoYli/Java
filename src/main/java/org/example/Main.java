@@ -123,7 +123,7 @@ public class Main {
     static int t7(int x){
         int a = 0;
         int b = 1;
-        int c = 0;
+        int c;
         for (int i = 0; i < x-1; i++) {
             c=a+b;
             a=b;
