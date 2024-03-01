@@ -41,7 +41,7 @@ public class Main {
     System.out.println(t7(10));
 
 // T8.
-    System.out.println(t8(10));
+    System.out.println(t8(20));
 
     }
 
@@ -141,18 +141,16 @@ public class Main {
 
         int half = Math.round((float)full/2);
         ArrayList<Integer> forRet = new ArrayList<>();
-
+        ArrayList<Integer> temp = new ArrayList<>();
         for (int i = half; i < full; i++) {
-            int root = (int)Math.round(sqrt(i));
-            int start = 2;
-            while(start < root){
-                if(i == 2) {
-                    forRet.add(i);
-                }
-
-
-                start++;
+            double root = sqrt(i);
+            for (int j = 2; j < root; j++) {
+                temp.add(i%j);
             }
+            if (!temp.contains(0)){
+                forRet.add(i);
+            }
+        temp.clear();
         }
         return forRet;
     }
