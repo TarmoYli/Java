@@ -2,9 +2,10 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
-import static java.lang.Math.round;
-import static java.lang.Math.sqrt;
+
+import static java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +44,14 @@ public class Main {
 // T8.
     System.out.println(t8(20));
 
+// T9.
+    System.out.println(t9(4777));
+
+// t10.
+        HashMap<String, ArrayList<Integer>> ulostus = t10();
+        for (String i : ulostus.keySet()){
+            System.out.println("Key: " + i + " Value: " + ulostus.get(i));
+        }
     }
 
 
@@ -139,19 +148,61 @@ public class Main {
     }
     static ArrayList<Integer> t8(int full){
 
-        int half = Math.round((float)full/2);
+        int half = round((float)full/2);
         ArrayList<Integer> forRet = new ArrayList<>();
-        ArrayList<Integer> temp = new ArrayList<>();
+        ArrayList<Integer> temp = new ArrayList<>();        // apu lista johon laitetaan jäännökset
         for (int i = half; i < full; i++) {
             double root = sqrt(i);
             for (int j = 2; j < root; j++) {
                 temp.add(i%j);
             }
-            if (!temp.contains(0)){
+            if (!temp.contains(0)){                         // nollaa ei löydy => on alkuluku
                 forRet.add(i);
             }
-        temp.clear();
+        temp.clear();                                       // tarvii tyhjätä joka kierroksella.
         }
         return forRet;
+    }
+    static String t9(int x){
+
+        String secs = String.valueOf(x%60);
+        String mins = String.valueOf(x/60%60);
+        String hrs = String.valueOf(x/60/60);
+        if(hrs.length() == 1){                          // nämä iffit on meh...
+            hrs = "0"+hrs;
+        }
+        if(mins.length() == 1){                         // voisi kuvitella tämän hoituvan jotenkin paremminkin
+            mins = "0"+mins;
+        }
+        if(secs.length() == 1){                         // mutta kun aikaa on rajallisesti tähän käytettävissä niin tällä mennään.
+            secs = "0"+secs;
+        }
+        String total = hrs + ":" + mins + ":" + secs;
+
+        return total;
+    }
+    static HashMap<String, ArrayList<Integer>> t10(){
+
+        HashMap<String, ArrayList<Integer>> dict = new HashMap<String, ArrayList<Integer>>();
+        int min = -50;
+        int max = 50;
+        ArrayList<Integer> negintit = new ArrayList<Integer>();
+        ArrayList<Integer> posintit = new ArrayList<Integer>();
+        ArrayList<Integer> nolintit = new ArrayList<Integer>();
+
+        for (int i = 0; i < 100; i++) {
+            int number = min + (int)(random()*((max-min)+1));
+            if(number < 0){
+                negintit.add(number);
+            } else if (number > 0) {
+                posintit.add(number);
+            } else {
+                nolintit.add(number);
+            }
+        }
+        dict.put("Negative", negintit);
+        dict.put("Positive", posintit);
+        dict.put("Zero",nolintit);
+        return dict;
     }
 }
