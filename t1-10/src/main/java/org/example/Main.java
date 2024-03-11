@@ -42,9 +42,9 @@ public class Main {
     System.out.println(t9.t9met(4777));
 
 // t10.
-        HashMap<String, ArrayList<Integer>> ulostus = t10.t10met();
-        for (String i : ulostus.keySet()){
-            System.out.println("Key: " + i + " Value: " + ulostus.get(i));
+        HashMap<String, ArrayList<Integer>> tuloste = t10.t10met();
+        for (String i : tuloste.keySet()){
+            System.out.println("Key: " + i + " Value: " + tuloste.get(i));
         }
     }
 }

@@ -6,7 +6,7 @@ public class t5
 
         int[] ret = new int[x.length];          //uusi array vastaamaan alkuperäistä
         for (int i = 0; i < x.length; i++) {    //for herjaa että arraycopy() olisi pare...
-            ret[i] = x[i];                      //...mut tällä mennään satanas!
+            ret[i] = x[i];                      //...mut tällä mennään!
         }                                       //se KUITENKIN tekee jtn samanlaista. väkisinkin.
 
         for (int i = 0; i < ret.length - 1; i++) {

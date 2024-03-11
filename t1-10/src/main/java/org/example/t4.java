@@ -19,6 +19,6 @@ public class t4
 
             }
         }
-        return null;    // lonkalta tämmönen tänne jos joku kusahtaa.
+        return null;
     }
 }
