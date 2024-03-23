@@ -14,8 +14,9 @@ public class teh11{
                 testThree += arr[i+j];
                 j++;
             }
-            if(testThree > bigThree)
+            if(testThree > bigThree) {
                 bigThree = testThree;
+            }
         }
         return bigThree;
     }
