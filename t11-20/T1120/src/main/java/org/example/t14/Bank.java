@@ -2,20 +2,10 @@ package org.example.t14;
 import java.util.ArrayList;
 public class Bank
 {
-    int accountNumber;
-    String customerName;
-    double accountBalance;
     ArrayList<UserAccount> AllAccounts = new ArrayList<>();
-    public void MakeNewAccount(int accountNumber, String clientName, double balance)
+    public void AddAccount(UserAccount account)
     {
-        UserAccount account = new UserAccount(accountNumber,clientName,balance);
         AllAccounts.add(account);
-    }
-    public void PrintAccounts()
-    {
-        for (UserAccount account : AllAccounts) {
-            System.out.println(account.customerName);
-        }
     }
     public void DeleteAccount(int deleteNumber)
     {
@@ -34,9 +24,9 @@ public class Bank
         {
             if (account.accountNumber == accountNumber)
             {
-                System.out.printf("Account: " + account.accountNumber+"%n"+
-                        "Customer: " + account.customerName+"%n"+
-                        "Balance: " + account.accountBalance+"%n");
+                System.out.printf("Account number: " + account.accountNumber+"%n"+
+                        "Customer name: " + account.customerName+"%n"+
+                        "Account balance: " + account.accountBalance+"€"+"%n");
             }
         }
     }
@@ -46,3 +36,13 @@ public class Bank
 //  - Luokalla tulee olla tieto olemassaolevista pankkitileistä.
 //  - Luokalla tulee olla metodit tilin lisäämiseen, poistamiseen
 //  ja tietyn tilin tietojen tulostamiseen annetun tilinumeron perusteella.
+
+
+//     public void PrintAccounts()
+//    {
+//        for (UserAccount account : AllAccounts) {
+//            System.out.println(account.customerName + " " +
+//                    account.accountNumber + " " +
+//                    account.accountBalance);
+//        }
+//    }

@@ -5,11 +5,12 @@ public class teh13
     public static long FolderSize(File folder)
     {
         long totalSize = 0;
-
         File[] filesInFolder = folder.listFiles();
+        int fileCount = 0;
 
-        int fileCount = filesInFolder.length;
-
+        if (filesInFolder != null) {
+            fileCount = filesInFolder.length;
+        }
         for (int i = 0; i < fileCount; i++) {
             if(filesInFolder[i].isFile())
             {
@@ -20,14 +21,13 @@ public class teh13
                 totalSize += FolderSize(filesInFolder[i]);
             }
         }
-
         return totalSize;
     }
 
 }
 
-// - Tee algoritmi, joka laskee annetun hakemiston ja sen alihakemistojen tiedostojen koon.
-// - Hakemiston polkua ei tarvitse lukea käyttäjän syötteestä,
-//   kunhan se toimii syötteenä metodille.
-// - Syötteen tyyppi on `File` joka löytyy paketista `java.io.File`
-// - Paluutyyppi on `long`
+//        File file1 = new File("C://data/");
+//        long totalSize = teh13.FolderSize(file1);
+//        System.out.printf(
+//                "Hakemiston ja alihakemistojen koko: %.1f Megatavua eli %d tavua",
+//                (double)totalSize/(1024*1024), totalSize);

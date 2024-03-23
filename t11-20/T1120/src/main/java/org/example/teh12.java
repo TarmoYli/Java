@@ -11,3 +11,5 @@ public class teh12
         return etunimet[rng.nextInt(7)] + " " + sukunimet[rng.nextInt(7)];
     }
 }
+
+//        System.out.println(teh12.makeName());
