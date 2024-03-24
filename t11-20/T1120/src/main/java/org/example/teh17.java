@@ -4,17 +4,19 @@ public class teh17
 {
     static String Stringverter(String ogString)
     {
-        char[] invert = new char[ogString.length()];
+        int ogLen = ogString.length();
+        char[] invert = new char[ogLen];
         for (int i = 0; i < ogString.length(); i++)
         {
-            invert[i] = ogString.charAt(ogString.length()-i-1);
+            invert[i] = ogString.charAt(ogLen-i-1);
         }
         return new String(invert);
     }
 }
 
 //- Tee algoritmi, joka kääntää merkkijonon toisinpäin.
-//- Tehtävässä ei saa käyttää Javan sisäänrakennettuja mekanismeja kuten `StringBuilder`-objektin `reverse` metodia.
+//- Tehtävässä ei saa käyttää Javan sisäänrakennettuja mekanismeja
+//  kuten `StringBuilder`-objektin `reverse` metodia.
 //- Metodi ottaa syötteenä `String`-tyyppisen muuttujan,
 //  - muunna se `char[]` tyyppiseksi,
 //  - käännä merkit
