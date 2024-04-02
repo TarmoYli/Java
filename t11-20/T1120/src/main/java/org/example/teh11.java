@@ -1,7 +1,6 @@
 package org.example;
 
 public class teh11{
-    int[] arr = {10,2,1,11,1,14,15};
     static int eka(int[] arr)
     {
         int bigThree = 0;
@@ -21,5 +20,3 @@ public class teh11{
         return bigThree;
     }
 }
-
-//        System.out.println(eka(arr));

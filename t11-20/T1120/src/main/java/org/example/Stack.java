@@ -41,17 +41,4 @@ public class Stack<T>
         return top == -1;                               // jos Sorsakoski™ on negatiivinen, ollaan (kammottavien?) totuuksien äärellä.
     }
 }
-/* Mainiin:
 
-        Stack<Integer> testStack = new Stack<Integer>(10);
-
-        for (int i = 0; i < 10; i++)
-        {
-            testStack.push(i*i);
-        }
-        System.out.println(testStack.pop());
-        testStack.push(123);
-        System.out.println(testStack.isEmpty());
-        System.out.println(testStack.size());
-
-*/

@@ -15,12 +15,3 @@ public class Task1 implements Runnable
         }
     }
 }
-
-/* Mainiin:
-    Task1 eka = new Task1();
-    Task2 toka = new Task2();
-    Thread ekaThread = new Thread(eka);
-    Thread tokaThread = new Thread(toka);
-    ekaThread.start();
-    tokaThread.start();
-*/

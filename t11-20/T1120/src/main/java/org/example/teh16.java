@@ -15,9 +15,9 @@ public class teh16
         int moddedSum = 0;
         int rngIndex = rng.nextInt(sequence.size()-1);
         sequence.remove(rngIndex);
-        for(int num : sequence){
-            System.out.println(num);
-        }
+//        for(int num : sequence){
+//            System.out.println(num);
+//        }
         for (int i = 0; i < sequence.size()-1; i++)
         {
             moddedSum += sequence.get(i);
@@ -25,8 +25,3 @@ public class teh16
         return originalSum - moddedSum;
     }
 }
-
-/*  mainiin:
-        ArrayList<Integer> luvut = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9));
-        System.out.println(teh16.puutos(luvut));
- */

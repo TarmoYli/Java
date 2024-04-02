@@ -25,9 +25,3 @@ public class teh13
     }
 
 }
-
-//        File file1 = new File("C://data/");
-//        long totalSize = teh13.FolderSize(file1);
-//        System.out.printf(
-//                "Hakemiston ja alihakemistojen koko: %.1f Megatavua eli %d tavua",
-//                (double)totalSize/(1024*1024), totalSize);

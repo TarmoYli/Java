@@ -16,10 +16,3 @@ public class NoiseFile extends FileTemplate{
         System.out.printf("Closing %s file from %s %n", getType(),getPath());
     }
 }
-/*
-- Luo molemmille tiedostotyypeille luokka, joka perii aiemmin luodun abstraktin luokan
-  - Tänne tarvitset konstruktorin, joka kutsuu yliluokan konstruktoria
-  - Molemmille luokille omat implementaatiot avaamis- ja sulkemismetodeista
-  - Riittää, että implementoinneissa esimerkiksi tulostetaan
-  "Opening audio file..." ja "Closing text file..."
-*/

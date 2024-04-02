@@ -32,17 +32,13 @@ public class Bank
     }
 }
 
-
-//  - Luokalla tulee olla tieto olemassaolevista pankkitileistä.
-//  - Luokalla tulee olla metodit tilin lisäämiseen, poistamiseen
-//  ja tietyn tilin tietojen tulostamiseen annetun tilinumeron perusteella.
-
-
-//     public void PrintAccounts()
-//    {
-//        for (UserAccount account : AllAccounts) {
-//            System.out.println(account.customerName + " " +
-//                    account.accountNumber + " " +
-//                    account.accountBalance);
-//        }
-//    }
+/*
+tässä oli tehtäväanto sellainen että ratkaisin asian näin. Ymmärrän kyllä että tehtävänannon saaminen sellaiseksi,
+että siinä ei ole tulkinnanvaraa on haastavaa eikä ehkä edes kovin oleellista ja/tai järkevää ajankäyttöä.
+"Luokalla tulee olla tieto olemassaolevista pankkitileistä."
+    tämä toteutuu kun suoritetaan AddAccount(), mutta jos se ei ole se mitä haettiin,
+    niin ratkaisisin sen niin että tekisin uuden listan joka saa ilmoituksen/lisäyksen UserAccount rakentajalta (tilinro)
+    jolloin luokalla olisi aina tieto uuden tilin luomisesta vaikka sitä ei lisättäisi addAccountilla.
+Pyydetyt metodit kuitenkin löytyvät kummastakin luokasta, ja ne toimivat odotetusti(?).
+Hyväksyn kyllä jos piste vähennetään jos/kun tehtävänantoa ei ole noudatettu oikein.
+ */
