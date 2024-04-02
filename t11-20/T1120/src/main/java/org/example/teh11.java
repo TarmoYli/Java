@@ -3,7 +3,7 @@ package org.example;
 public class teh11{
     static int eka(int[] arr)
     {
-        int bigThree = 0;
+        int bigThree = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length-2; i++)
         {
             int testThree = 0;
