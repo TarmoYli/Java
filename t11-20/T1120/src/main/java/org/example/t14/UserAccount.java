@@ -1,7 +1,6 @@
 package org.example.t14;
 
-public class UserAccount
-{
+public class UserAccount {
     final int accountNumber;
     String customerName;
     double accountBalance;
@@ -12,37 +11,29 @@ public class UserAccount
         this.customerName = name;
     }
 
-    public void Withdraw(double withdrawAmount)
+    public void withdraw(double withdrawAmount)
     {
         this.accountBalance -= withdrawAmount;
     }
 
-    public void Deposit(double depositAmount)
+    public void deposit(double depositAmount)
     {
         this.accountBalance += depositAmount;
     }
 
-    public void CheckBalance()
+    public void checkBalance()
     {
         System.out.println("Balance: " + this.accountBalance + "€");
     }
-    public void UsePrint()
+    public void usePrint()
     {
-        this.PrintAllInfo();
+        this.printAllInfo();
     }
-    protected void PrintAllInfo()
+    protected void printAllInfo()
     {
         System.out.printf(
                 "Name: " + this.customerName+"%n"+
                 "Account #: " + this.accountNumber+"%n"+
-                "Balance: " + this.accountBalance+"€");
+                "Balance: " + this.accountBalance+"€" + "%n");
     }
 }
-
-
-// - Tee luokka, joka kuvaa käyttäjän pankkitiliä.
-// - Luokassa tulee olla tieto pankkitilin numerosta, omistajan nimestä ja saldosta.
-// - Pankkitilin numeron tulee olla muuttumaton,
-//   sen tyyppi voi olla valintasi mukaan `String` tai `int` tai jokin muu mielestäsi sopiva tyyppi.
-// - Luokalla tulee olla metodit nostamiseen, tallettamiseen ja saldon tulostamiseen.
-// - Lisäksi luokalla tulee olla protected metodi, joka tulostaa tilin kaikki tiedot.

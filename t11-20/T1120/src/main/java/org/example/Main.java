@@ -2,13 +2,6 @@ package org.example;
 
 import org.example.t14.Bank;
 import org.example.t14.UserAccount;
-import org.example.t18.FileType;
-import org.example.t18.NoiseFile;
-import org.example.t18.TextFile;
-import org.example.t20.Task1;
-import org.example.t20.Task2;
-import java.util.Arrays;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args)
@@ -29,22 +22,35 @@ public class Main {
         }
 //  Pankki tehtävä:
 /*
-        Bank banker = new Bank();
-        UserAccount pekantili = new UserAccount(123456,"Pekka Poro",1500);
-        UserAccount matintili = new UserAccount(654321,"Matti Mato",2000);
-        banker.AddAccount(pekantili);
-        banker.AddAccount(matintili);
-        banker.PrintAccountByNumber(123456);
-        banker.DeleteAccount(123456);
-        matintili.UsePrint();
-        matintili.CheckBalance();
-        matintili.Withdraw(200);
-        matintili.CheckBalance();
-        matintili.Deposit(982.21);
-        matintili.CheckBalance();
-        banker.DeleteAccount(654321);
+    Bank banker = new Bank();
 
-*/
+    banker.createAccount(123,"Pekka",3210.12);        //luodaan uusi tili
+    UserAccount pekanTili = banker.getAccountByNum(123);            //tehdään viittaus jotta päästään käyttämään tilin metodeja
+    banker.addAccount(pekanTili);                                           //tili lisätään "järjestelmään"
+
+    banker.createAccount(234,"Matti",1111.11);
+    UserAccount matinTili = banker.getAccountByNum(234);
+    banker.addAccount(matinTili);
+
+    banker.printAccountByNumber(123);
+
+    pekanTili.deposit(200.12);
+    pekanTili.checkBalance();
+    pekanTili.withdraw(1232.24);
+    pekanTili.checkBalance();
+    pekanTili.usePrint();
+
+    banker.printAccountByNumber(123);
+    banker.deleteAccount(123);
+    */
     }
 }
-
+// muutin tuon nyt takaisin sellaiseksi että tili luodaan pankissa.
+// deleteAccount() poistaa tilin "järjestelmästä"
+// mutta tili(olio) jää vielä lillumaan viitteeseen sekä allAccounts listaan
+// jos ne tarvisi myös poistuttaa niin deleteAccountsiin lisää poiston toisestakin listasta
+// allAccounts on olemassa koska: "Luokalla tulee olla tieto olemassaolevista pankkitileistä."
+// mutta lisäksi viite tarvisi asettaa tyyliin: "pekantili = null;"
+// ajattelin että koittaisin rakennella tätä observer DPtä soveltaen, interfaceilla etc. Bank implements IObserver ja tilit implements IObservable.
+// siinä olisi järki koska pankin olisi hyvä tietää (pitää kirjaa) kaikista tileillä tapahtuvista muutoksista (so. tässä tapauksessa nostoista ja talletuksista).
+// mitä enemmän tätä tehtävää mietin sitä monimutkaisemmaksi tämä kasvaa. On vaikeaa lopettaa tämän tekemistä koska se ei minusta ole "valmis". :(

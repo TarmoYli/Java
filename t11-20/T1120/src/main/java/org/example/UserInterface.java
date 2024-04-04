@@ -99,7 +99,7 @@ public class UserInterface {
                 Thread tokaThread = new Thread(toka);
                 ekaThread.start();
                 tokaThread.start();
-                try
+                try                                 // tämän superhäävin menun takia joinataan nämä
                 {
                     ekaThread.join();
                     tokaThread.join();
